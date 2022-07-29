@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Project - Library</title>
+</head>
+<body>
+    <!-- <h1><em>My Library</em></h1>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit alias dicta quibusdam cumque ipsa ipsum reiciendis animi, officia provident veniam quis delectus minima earum suscipit ea, beatae vitae ipsam nemo.</p>
+<button class="button open-button">open modal</button>
+
+-->
+    <container class="container">
+        <div class="header">
+            <h1>My library</h1>
+        </div>
+        <div class="main">
+            <div class="actions">
+                <button class="action-buttons open-button">
+                    Add a new book
+                </button>
+                <button class="action-buttons">
+                    Remove a book
+                </button>
+                <div class="library"> 
+                </div>
+            </div>
+        </div>
+    </container>
+
+
+
+
+
+
+    <dialog class="modal" id="modal">
+        <h2>An interesting title</h2>    
+        <form class="form" method="dialog">
+            <fieldset>
+                <label class="main-label" for="title">Title&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="title" required></label>
+                <label class="main-label" for="author">Author: <input type="text" id="author" required></label>
+                <label class="main-label" for="numPages">Pages:&nbsp;<input type="number" id="numPages" required></label>
+                <label class="main-label">Already read it: 
+                    <input type="radio" id="yes" name="readIt" value="1" required style="margin-left:3rem">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="readIt" value="0" required  style="margin-left: 2rem">
+                    <label for="no">No</label></label>
+            </fieldset>
+            <button class="modal-buttons" type="submit">Submit</button>
+            <button class="modal-buttons close-button">Close</button> 
+        </form>
+    </dialog>
+</body>
+</html>
