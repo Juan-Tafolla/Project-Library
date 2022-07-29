@@ -18,7 +18,7 @@
   .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr;    
+    grid-template-rows: 100px 1fr;  
   }
   .header{
     background-color: var(--dark-blue);
@@ -53,6 +53,8 @@
     color: white;
     font-size: 1.2rem;
     padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
   }
   
   
@@ -64,7 +66,7 @@
   }
   
   .modal{
-    width: 70%;
+    width: min(600px, calc(50% + 100px));
   }
   .modal::-webkit-backdrop {
     background: rgba(0, 0, 0, 0.4);
@@ -108,4 +110,75 @@
     font-size: 1rem;
     background-color: var(--grey);
     color: var(--dark-blue);
+  }
+
+  .library{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(18%,1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem; 
+
+  }
+
+  .book{
+    height: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: white;
+    color: black;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 2fr;
+    justify-items: center;
+    align-items: start;
+  }
+  .title{
+    align-self: center;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  .author{
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .author::before{
+    content: '- ';
+  }
+  .pages{
+    font-size: 1.3rem;
+  }
+  .pages::before{
+    content: 'Num. Pages: ';
+  }
+  .readYet{
+    border: 0;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    padding: 0.8em;
+    
+    cursor: pointer;
+    
+    align-self: end;
+  }
+
+  .yes{
+    background-color: rgb(0, 135, 50);
+    color: white;
+  }
+  .yes::after{
+    content: "Already read it! 😊";
+  }
+  .yes:hover{
+    background-color: rgb(90, 175, 115);
+  }
+  .no{
+    background-color: rgb(135, 0, 0);
+    color: white;
+  }
+  .no::after{
+    content: "Haven't read it. 😔";
+  }
+  .no:hover{
+    background-color: rgb(175, 90, 90);
   }

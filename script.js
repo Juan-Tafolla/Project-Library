@@ -23,9 +23,28 @@ function removeBookFromLibrary(){
 }
 
 
+
+const library = document.querySelector('.library');
+
+const newDiv = document.createElement("div");
+newDiv.classList.add(".book");
+library.appendChild(newDiv);
+
+
 const modal = document.querySelector("#modal");
 const openModal = document.querySelector(".open-button");
 const closeModal = document.querySelector(".close-button");
+
+// ===================================================
+
+const formElement = document.querySelector("bookForm");
+const request = new XMLHttpRequest();
+request.open("POST", "index.html");
+request.send(new FormData(formElement));
+
+
+// ===================================================
+
 
 openModal.addEventListener("click", () => {
   modal.showModal();
@@ -34,3 +53,5 @@ openModal.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
   modal.close();
 });
+
+

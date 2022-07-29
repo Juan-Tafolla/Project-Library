@@ -29,7 +29,13 @@
                 <button class="action-buttons">
                     Remove a book
                 </button>
-                <div class="library"> 
+            </div>
+            <div class="library"> 
+                <div class="book">
+                    <div class="title">The Hobbit</div>
+                    <div class="author">J.R.R Tolkien</div>
+                    <div class="pages">384</div>
+                    <button class="readYet yes"></button>
                 </div>
             </div>
         </div>
@@ -42,15 +48,15 @@
 
     <dialog class="modal" id="modal">
         <h2>An interesting title</h2>    
-        <form class="form" method="dialog">
+        <form class="form" id="bookForm" method="post" name="bookForm">
             <fieldset>
-                <label class="main-label" for="title">Title&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="title" required></label>
-                <label class="main-label" for="author">Author: <input type="text" id="author" required></label>
-                <label class="main-label" for="numPages">Pages:&nbsp;<input type="number" id="numPages" required></label>
+                <label class="main-label" for="title">Title&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="title" name="title" required></label>
+                <label class="main-label" for="author">Author: <input type="text" id="author" name="author" required></label>
+                <label class="main-label" for="numPages">Pages:&nbsp;<input type="number" id="numPages" name="numPages" required></label>
                 <label class="main-label">Already read it: 
-                    <input type="radio" id="yes" name="readIt" value="1" required style="margin-left:3rem">
+                    <input type="radio" id="yes" name="readIt" value="1" required style="margin-left:3rem; cursor: pointer;">
                     <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="readIt" value="0" required  style="margin-left: 2rem">
+                    <input type="radio" id="no" name="readIt" value="0" required  style="margin-left: 2rem; cursor: pointer;">
                     <label for="no">No</label></label>
             </fieldset>
             <button class="modal-buttons" type="submit">Submit</button>
