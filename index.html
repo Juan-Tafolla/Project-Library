@@ -12,11 +12,7 @@
     <title>Project - Library</title>
 </head>
 <body>
-    <!-- <h1><em>My Library</em></h1>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit alias dicta quibusdam cumque ipsa ipsum reiciendis animi, officia provident veniam quis delectus minima earum suscipit ea, beatae vitae ipsam nemo.</p>
-<button class="button open-button">open modal</button>
 
--->
     <container class="container">
         <div class="header">
             <h1>My library</h1>
@@ -31,24 +27,13 @@
                 </button>
             </div>
             <div class="library"> 
-                <div class="book">
-                    <div class="title">The Hobbit</div>
-                    <div class="author">J.R.R Tolkien</div>
-                    <div class="pages">384</div>
-                    <button class="readYet yes"></button>
-                </div>
             </div>
         </div>
     </container>
 
-
-
-
-
-
     <dialog class="modal" id="modal">
         <h2>An interesting title</h2>    
-        <form class="form" id="bookForm" method="post" name="bookForm">
+        <form class="form" id="bookForm" method="dialog" name="bookForm">
             <fieldset>
                 <label class="main-label" for="title">Title&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="title" name="title" required></label>
                 <label class="main-label" for="author">Author: <input type="text" id="author" name="author" required></label>
@@ -56,7 +41,7 @@
                 <label class="main-label">Already read it: 
                     <input type="radio" id="yes" name="readIt" value="1" required style="margin-left:3rem; cursor: pointer;">
                     <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="readIt" value="0" required  style="margin-left: 2rem; cursor: pointer;">
+                    <input type="radio" id="no" name="readIt"  value="0" required  style="margin-left: 2rem; cursor: pointer;">
                     <label for="no">No</label></label>
             </fieldset>
             <button class="modal-buttons" type="submit">Submit</button>
